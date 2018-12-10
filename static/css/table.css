@@ -1,0 +1,33 @@
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul>li {
+  position: relative;
+  margin-bottom: 2px;
+  background: rgba(12, 13, 14, 0.15);
+  padding: 15px 5px;
+}
+
+ul>li>.img {
+  position: absolute;
+}
+
+ul>li>.desc {
+  padding-left: 50px;
+  font-family: Helvetica;
+}
+
+ul>li>.desc>small {
+  display: block;
+  padding-top: 5px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+ul>li:hover{
+  background:darkgray
+}

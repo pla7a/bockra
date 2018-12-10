@@ -1,0 +1,33 @@
+
+<title>Bockra</title>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/newsty.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+</head>
+
+<header>
+  <a href="/"><h1>Bockra</h1></a>
+  <h3>Tweet and Sentiment</h3>
+  {% if pos > neg %}
+    <h3>Overall Sentiment: {{ pos }}% positive</h3>
+  {% endif %}
+  {% if neg >= pos %}
+    <h3>Overall Sentiment: {{ neg }}% negative</h3>
+  {% endif %}
+</header>
+
+<ul>
+  <li>
+    <div class="img">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+
+    <div class="desc">
+      <strong>@{{ screen_name }}: {{ name }}</strong>
+      <small>{{ tweet_text }}</small>
+    </div>
+  </li>
+</ul>
